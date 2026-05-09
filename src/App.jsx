@@ -14,7 +14,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
-const API_URL = 'http://localhost:5000/api/diagnose';
+const API_URL = 'https://agentic-ai-backend.vercel.app/api/diagnose';
 
 function App() {
   const [symptoms, setSymptoms] = useState('');

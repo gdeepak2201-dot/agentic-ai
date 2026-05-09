@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  RotateCcw, 
-  ArrowRight, 
-  BrainCircuit, 
-  Pill, 
-  Clock, 
-  Shield, 
+import {
+  Activity,
+  RotateCcw,
+  ArrowRight,
+  BrainCircuit,
+  Pill,
+  Clock,
+  Shield,
   AlertCircle,
   Loader2,
   CheckCircle2
 } from 'lucide-react';
 
-const API_URL = 'https://agentic-ai-backend.vercel.app/api/diagnose';
+const API_URL = import.meta.env.PROD ? '/api/diagnose' : 'http://localhost:5000/api/diagnose';
 
 function App() {
   const [symptoms, setSymptoms] = useState('');
@@ -26,7 +26,7 @@ function App() {
   const diagnose = async (e) => {
     e.preventDefault();
     if (!symptoms.trim()) return;
-    
+
     setLoading(true);
     setResult(null);
     setThoughts([]);
@@ -34,14 +34,14 @@ function App() {
 
     try {
       const { data } = await axios.post(API_URL, { symptoms });
-      
+
       if (data.thoughts) {
         for (let i = 0; i < data.thoughts.length; i++) {
           setThoughts(prev => [...prev, data.thoughts[i]]);
           await new Promise(r => setTimeout(r, 600));
         }
       }
-      
+
       setResult(data);
     } catch (err) {
       setError('System unavailable. Please try again later.');
@@ -75,12 +75,12 @@ function App() {
               onChange={(e) => setSymptoms(e.target.value)}
               disabled={loading}
             />
-            
-            {error && <div className="error-msg flex items-center gap-2"><AlertCircle size={16}/> {error}</div>}
+
+            {error && <div className="error-msg flex items-center gap-2"><AlertCircle size={16} /> {error}</div>}
 
             <AnimatePresence>
               {thoughts.length > 0 && (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   className="reasoning-list"
@@ -90,10 +90,10 @@ function App() {
                     Agent Reasoning
                   </div>
                   {thoughts.map((thought, i) => (
-                    <motion.div 
-                      key={i} 
-                      initial={{ opacity: 0, x: -10 }} 
-                      animate={{ opacity: 1, x: 0 }} 
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
                       className="reasoning-step"
                     >
                       <CheckCircle2 size={14} className="text-green-500" />
@@ -110,7 +110,7 @@ function App() {
               )}
             </AnimatePresence>
 
-            <button 
+            <button
               onClick={diagnose}
               className="btn"
               disabled={loading || !symptoms.trim()}
@@ -119,7 +119,7 @@ function App() {
             </button>
           </div>
         ) : (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="card"
@@ -175,8 +175,8 @@ function App() {
       </main>
 
       <footer>
-        <p><strong>DISCLAIMER:</strong> This is an AI agent for educational purposes only.</p>
-        <p>Consult a qualified medical professional for any health concerns.</p>
+        <p><strong>DISCLAIMER:</strong> </p>
+        <p></p>
       </footer>
     </div>
   );

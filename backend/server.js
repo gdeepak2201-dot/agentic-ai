@@ -98,6 +98,10 @@ app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Agentic Backend active on port ${PORT}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Agentic Backend active on port ${PORT}`);
+  });
+}
+
+module.exports = app;

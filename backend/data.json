@@ -1,0 +1,74 @@
+{
+  "diseases": [
+    {
+      "name": "Common Cold",
+      "symptoms": ["sneezing", "sore throat", "runny nose", "cough", "mild fever"],
+      "precautions": ["Rest", "Drink plenty of fluids", "Take Vitamin C", "Gargle with salt water"],
+      "prescription": {
+        "medications": ["Acetaminophen (500mg)", "Cough Syrup", "Saline Nasal Spray"],
+        "dosage": "Every 6 hours as needed",
+        "duration": "3-5 days"
+      }
+    },
+    {
+      "name": "Flu (Influenza)",
+      "symptoms": ["high fever", "muscle aches", "chills", "fatigue", "dry cough", "headache"],
+      "precautions": ["Stay home and rest", "Hydrate well", "Take antiviral medication if prescribed", "Monitor temperature"],
+      "prescription": {
+        "medications": ["Oseltamivir (Tamiflu)", "Ibuprofen (400mg)", "Oral Rehydration Salts"],
+        "dosage": "Twice daily",
+        "duration": "5 days"
+      }
+    },
+    {
+      "name": "Migraine",
+      "symptoms": ["severe headache", "nausea", "sensitivity to light", "sensitivity to sound", "visual disturbances"],
+      "precautions": ["Rest in a dark, quiet room", "Apply a cold compress to your forehead", "Stay hydrated", "Avoid known triggers like caffeine or stress"],
+      "prescription": {
+        "medications": ["Sumatriptan (50mg)", "Naproxen (500mg)", "Metoclopramide"],
+        "dosage": "At onset of symptoms",
+        "duration": "As needed (max 2 doses/24h)"
+      }
+    },
+    {
+      "name": "Gastroenteritis (Stomach Flu)",
+      "symptoms": ["nausea", "vomiting", "diarrhea", "stomach cramps", "low-grade fever"],
+      "precautions": ["Sip clear liquids", "Eat bland foods like crackers or toast", "Avoid dairy and caffeine", "Rest your stomach"],
+      "prescription": {
+        "medications": ["Loperamide", "Bismuth Subsalicylate", "Probiotics"],
+        "dosage": "After each loose stool",
+        "duration": "Until symptoms subside"
+      }
+    },
+    {
+      "name": "Allergies",
+      "symptoms": ["itchy eyes", "watery eyes", "sneezing", "runny nose", "skin rash", "hives"],
+      "precautions": ["Avoid allergens", "Take antihistamines", "Use a nasal saline spray", "Keep windows closed during high pollen seasons"],
+      "prescription": {
+        "medications": ["Loratadine (10mg)", "Fluticasone Nasal Spray", "Eye drops"],
+        "dosage": "Once daily",
+        "duration": "As long as allergens are present"
+      }
+    },
+    {
+      "name": "Asthma",
+      "symptoms": ["shortness of breath", "wheezing", "chest tightness", "coughing"],
+      "precautions": ["Use your inhaler as prescribed", "Avoid triggers like smoke or dust", "Stay calm and sit upright", "Seek emergency care if symptoms worsen"],
+      "prescription": {
+        "medications": ["Albuterol (Inhaler)", "Fluticasone (Inhaler)", "Montelukast"],
+        "dosage": "2 puffs every 4 hours as needed",
+        "duration": "Ongoing/Chronic"
+      }
+    },
+    {
+      "name": "Food Poisoning",
+      "symptoms": ["nausea", "vomiting", "watery diarrhea", "abdominal pain", "fever"],
+      "precautions": ["Stay hydrated", "Slowly reintroduce bland foods", "Rest", "Seek medical attention if severe"],
+      "prescription": {
+        "medications": ["ORS (Oral Rehydration Solution)", "Activated Charcoal", "Acetaminophen"],
+        "dosage": "Frequent small sips",
+        "duration": "24-48 hours"
+      }
+    }
+  ]
+}

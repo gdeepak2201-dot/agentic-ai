@@ -157,7 +157,7 @@ function App() {
                       <Clock size={14} /> {result.prescription.dosage}
                     </div>  
                   </div>
-                  <div>
+                  <div>  
                     <span className="label !text-amber-800/60 !mb-1">Duration</span>
                     <div className="flex items-center gap-2 text-sm font-medium text-amber-900">
                       <Activity size={14} /> {result.prescription.duration}

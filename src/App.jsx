@@ -155,7 +155,7 @@ function App() {
                     <span className="label !text-amber-800/60 !mb-1">Dosage</span>
                     <div className="flex items-center gap-2 text-sm font-medium text-amber-900">
                       <Clock size={14} /> {result.prescription.dosage}
-                    </div>
+                    </div>  
                   </div>
                   <div>
                     <span className="label !text-amber-800/60 !mb-1">Duration</span>

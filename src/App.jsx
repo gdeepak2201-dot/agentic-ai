@@ -175,7 +175,7 @@ function App() {
       </main>
 
       <footer>
-        <p><strong>DISCLAIMER:</strong> </p>
+        <p><strong>DISCLAIMER:</strong> </p>  
         <p></p>
       </footer>
     </div>

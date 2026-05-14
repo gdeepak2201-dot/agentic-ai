@@ -309,6 +309,6 @@ footer {
 .text-amber-800 { color: #fcd34d !important; }
 .text-amber-600 { color: #fbbf24 !important; }
 .text-amber-900 { color: #fef3c7 !important; }
-.!text-amber-800\/60 { color: rgba(252, 211, 77, 0.6) !important; }
-.!text-slate-900 { color: #0f172a !important; }
-.!bg-slate-100 { background: #f8fafc !important; }
+.\!text-amber-800\/60 { color: rgba(252, 211, 77, 0.6) !important; }
+.\!text-slate-900 { color: #0f172a !important; }
+.\!bg-slate-100 { background: #f8fafc !important; }

@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Medical Knowledge Base (The Agent's Tool)
-const knowledgeBase = JSON.parse(fs.readFileSync(path.join(__dirname, 'data.json'), 'utf8'));
+const knowledgeBase = require('./data.json');
 
 /**
  * SYMPTOM AGENT
@@ -93,9 +93,9 @@ app.post('/api/diagnose', async (req, res) => {
 });
 
 // Serve frontend in production or if deployed as one unit
-app.use(express.static(path.join(__dirname, '../dist')));
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
+app.use(express.static(path.join(__dirname, '../../dist')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../dist/index.html'));
 });
 
 if (!process.env.VERCEL) {

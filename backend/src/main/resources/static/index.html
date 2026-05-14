@@ -12,21 +12,22 @@
     <h1>Agentic AI Symptom Checker</h1>
   </header>
   <main>
-    <section class="input-section">
-      <label for="symptoms">Enter your symptoms (comma‑separated):</label>
-      <textarea id="symptoms" rows="4" placeholder="e.g., fever, cough, headache"></textarea>
-      <button id="submitBtn">Diagnose</button>
+    <section class="input-section card">
+      <label class="label" for="symptoms">Enter your symptoms (comma‑separated):</label>
+      <textarea id="symptoms" class="input-field" rows="4" placeholder="e.g., fever, cough, headache"></textarea>
+      <button id="submitBtn" class="btn">Diagnose</button>
+      <p id="errorMsg" class="error-msg" hidden></p>
     </section>
-    <section class="result-section" id="result" hidden>
-      <h2>Diagnosis Result</h2>
+    <section class="result-section card" id="result" hidden>
+      <h2 class="section-title">Diagnosis Result</h2>
       <div id="diagnosis"></div>
       <div id="precautions"></div>
       <div id="prescription"></div>
       <div id="confidence"></div>
     </section>
-    <section class="thoughts-section" id="thoughts" hidden>
-      <h3>Agent Thoughts</h3>
-      <ul id="thoughtsList"></ul>
+    <section class="thoughts-section card" id="thoughts" hidden>
+      <h3 class="section-title">Agent Thoughts</h3>
+      <ul id="thoughtsList" class="reasoning-list"></ul>
     </section>
   </main>
   <footer>

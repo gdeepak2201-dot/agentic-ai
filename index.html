@@ -1,37 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agentic AI Symptom Checker</title>
-  <meta name="description" content="AI-powered medical symptom checker (educational only)." />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Agentic AI Symptom Checker</h1>
-  </header>
-  <main>
-    <section class="input-section">
-      <label for="symptoms">Enter your symptoms (comma‑separated):</label>
-      <textarea id="symptoms" rows="4" placeholder="e.g., fever, cough, headache"></textarea>
-      <button id="submitBtn">Diagnose</button>
-    </section>
-    <section class="result-section" id="result" hidden>
-      <h2>Diagnosis Result</h2>
-      <div id="diagnosis"></div>
-      <div id="precautions"></div>
-      <div id="prescription"></div>
-      <div id="confidence"></div>
-    </section>
-    <section class="thoughts-section" id="thoughts" hidden>
-      <h3>Agent Thoughts</h3>
-      <ul id="thoughtsList"></ul>
-    </section>
-  </main>
-  <footer>
-    <p>For educational purposes only. Not a medical diagnosis.</p>
-  </footer>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic AI - Medical Symptom Analysis</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

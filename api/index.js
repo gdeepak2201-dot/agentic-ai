@@ -94,7 +94,7 @@ app.post('/api/diagnose', async (req, res) => {
 
 // Serve frontend in production or if deployed as one unit
 app.use(express.static(path.join(__dirname, '../../dist')));
-app.get('*', (req, res) => {
+app.get('(.*)', (req, res) => {
   res.sendFile(path.join(__dirname, '../../dist/index.html'));
 });
 
